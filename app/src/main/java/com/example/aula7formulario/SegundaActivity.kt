@@ -15,16 +15,23 @@ class SegundaActivity : AppCompatActivity() {
         binding = ActivitySegundaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val email = intent.getStringExtra("EXTRA_EMAIL")
-        val doce = intent.getStringExtra("EXTRA_DOCE")
-        val fruta = intent.getStringExtra("EXTRA_FRUTA")
+        val nome = intent.getStringExtra("EXTRA_NOME")
+        val cel = intent.getStringExtra("EXTRA_CEL").toInt()
+        val endereco = intent.getStringExtra("EXTRA_ENDERECO")
 
         binding.botaoAplicar2.setOnClickListener {
+
+            val email = binding.etEmail.text.toString()
+            val doce = binding.etDocePreferido.text.toString()
+            val fruta = binding.etFrutaPreferida.text.toString()
 
             Intent(this, TerceiraActivity::class.java).also{
 
                 val bundle = Bundle()
                 with(bundle){
+                    putString("EXTRA_NOME", nome)
+                    putInt("EXTRA_CEL", cel)
+                    putString("EXTRA_ENDERECO", endereco)
                     putString("EXTRA_EMAIL", email)
                     putString("EXTRA_DOCE", doce)
                     putString("EXTRA_FRUTA", fruta)

@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
 
                 val bundle = Bundle()
                 bundle.putString("EXTRA_NOME", nome)
-                bundle.putInt("EXTRA_NOME", cel)
-                bundle.putString("EXTRA_NOME", endereco)
+                bundle.putInt("EXTRA_CEL", cel)
+                bundle.putString("EXTRA_ENDERECO", endereco)
                 it.putExtras(bundle)
 
 
