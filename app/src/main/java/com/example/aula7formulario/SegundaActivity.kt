@@ -16,7 +16,7 @@ class SegundaActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val nome = intent.getStringExtra("EXTRA_NOME")
-        val cel = intent.getStringExtra("EXTRA_CEL").toInt()
+        val cel = intent.getStringExtra("EXTRA_CEL")?.toInt()
         val endereco = intent.getStringExtra("EXTRA_ENDERECO")
 
         binding.botaoAplicar2.setOnClickListener {
@@ -30,7 +30,7 @@ class SegundaActivity : AppCompatActivity() {
                 val bundle = Bundle()
                 with(bundle){
                     putString("EXTRA_NOME", nome)
-                    putInt("EXTRA_CEL", cel)
+                    cel?.let { it1 -> putInt("EXTRA_CEL", it1) }
                     putString("EXTRA_ENDERECO", endereco)
                     putString("EXTRA_EMAIL", email)
                     putString("EXTRA_DOCE", doce)
