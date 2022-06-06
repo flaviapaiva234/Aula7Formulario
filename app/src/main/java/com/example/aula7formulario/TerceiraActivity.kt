@@ -22,7 +22,7 @@ class TerceiraActivity : AppCompatActivity() {
         // se não, pode acabar dando cresh
         val incomingNome = extras?.getString("EXTRA_NOME") // getString => é para trazer a nossa String
         val incomingCel = extras?.getInt("EXTRA_CEL")
-        val incomingEndereco = extras?.getString("EXTRA_ENTERECO")
+        val incomingEndereco = extras?.getString("EXTRA_ENDERECO")
         val incomingEmail = extras?.getString("EXTRA_EMAIL") // getString => é para trazer a nossa String
         val incomingDoce = extras?.getString("EXTRA_DOCE")
         val incomingFruta = extras?.getString("EXTRA_FRUTA")
